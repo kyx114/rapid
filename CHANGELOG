@@ -1,0 +1,10 @@
+v0.2
+- updated skipfish to 2.09b
+- added smtp-user-enum 
+- added waffit
+- added thc-amap
+- added joomscan
+- added wpscan
+
+v0.1
+- initial release

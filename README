@@ -1,9 +1,9 @@
-rapid v0.1
+rapid v0.2
 villain@evilthings.org
 
 about
 =======
-rapid is something i worked on in order to help with a pentest. it's designed to be a 'drop box' of sorts which phones home via ssh, something you can connect to a network and launch a pentest, scan or pivot from. it's built to run on a raspberry pi with the debian7/wheezy beta that is currently out. haven't tested with raspbian or anything else, so not sure how it'll work out. the idea was the keep it as lightweight as possible. i didn't see the value of adding too many tools like john or hydra because of the lack of computing power on the raspberrypi.
+rapid is something i worked on in order to help with a pentest. it's designed to be a 'drop box' of sorts which phones home via ssh, something you can connect to a network and launch a pentest, scan or pivot from. it's built to run on a raspberry pi with the debian7/wheezy beta that is currently out. haven't tested with raspbian or anything else, so not sure how it'll work out. the idea was the keep it as lightweight as possible. i didn't see the value of adding too many tools like john or hydra because of the lack (comparitively) of processing power on the raspberrypi.
 
 sshtun
 ======

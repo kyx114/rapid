@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo " "
-echo "[x] installing rapid v0.1"
+echo "[x] installing rapid v0.2"
 echo "    villain@evilthings.org"
 echo " "
 
@@ -31,7 +31,11 @@ echo -n "[x] running apt-get update/upgrade.. "
 echo "done"
 
 echo -n "[x] installing baseline packages.. "
-/usr/bin/apt-get -y install curl git-core nmap john p0f dsniff netcat nikto python-scapy tcpdump hping3 ettercap-text-only nbtscan ptunnel ngrep proxychains tcpflow httptunnel smbclient udptunnel ipcalc tcpreplay subversion ruby irb ri rubygems libruby ruby-dev libpcap-dev python-pexpect tcptraceroute lsof libssl-dev libidn11-dev libidn11 sslsniff hydra sslstrip openvpn tinyproxy macchanger python-beautifulsoup > /dev/null 2>&1
+/usr/bin/apt-get -y install curl git-core nmap john p0f dsniff netcat nikto python-scapy tcpdump hping3 ettercap-text-only nbtscan ptunnel ngrep proxychains tcpflow httptunnel smbclient udptunnel ipcalc tcpreplay subversion ruby irb ri rubygems libruby ruby-dev libpcap-dev python-pexpect tcptraceroute lsof libssl-dev libidn11-dev libidn11 sslsniff hydra sslstrip openvpn tinyproxy macchanger python-beautifulsoup stunnel4 libxslt-dev libxml2-dev libcurl4-gnutls-dev libopenssl-ruby libwww-perl libwww-mechanize-perl > /dev/null 2>&1
+echo "done"
+
+echo -n "[x] installing baseline gems.. "
+/usr/bin/gem install typhoeus nokogiri json
 echo "done"
 
 echo -n "[x] removing unnecessary services.. "
@@ -56,8 +60,20 @@ chmod 755 /usr/local/bin/rapid-update.sh > /dev/null 2>&1
 echo "done"
 
 echo -n "[x] installing random tools to /pentest.. "
-cd src/pentest
+cd src/pentest/amap > /dev/null 2>&1
+./configure > /dev/null 2>&1
+make > /dev/null 2>&1
+make install > /dev/null 2>&1
+cd ../ > /dev/null 2>&1
+
+cd dnsmap > /dev/null 2>&1
+make > /dev/null 2>&1
+make install > /dev/null 2>&1
+cd ../ > /dev/null 2>&1
+
 cp -R * /pentest > /dev/null 2>&1
+rm -rf /pentest/amap > /dev/null 2>&1
+rm -rf /pentest/dnsmap > /dev/null 2>&1
 echo "done"
 
 echo -n "[x] downloading exploitdb archive to /pentest.. "
@@ -101,6 +117,11 @@ cd /pentest
 git clone https://github.com/ironbee/waf-research.git > /dev/null 2>&1
 echo "done"
 
+echo -n "[x] installing wpscan.. "
+cd /pentest
+git clone https://github.com/wpscanteam/wpscan.git > /dev/null 2>&1
+echo "done"
+
 echo -n "[x] installing weevely.. "
 cd /pentest
 git clone https://github.com/epinna/Weevely.git weevely > /dev/null 2>&1
@@ -117,6 +138,10 @@ echo "done"
 
 echo -n "[x] changing default RAM allocation.. "
 cp /boot/arm224_start.elf /boot/start.elf
+echo "done"
+
+echo -n "[x] updating profile.. "
+echo "PATH=$PATH:/pentest" >> /root/.bashrc
 echo "done"
 
 echo " "

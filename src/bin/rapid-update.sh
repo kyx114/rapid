@@ -45,6 +45,11 @@ cd /pentest/weevely
 git pull > /dev/null 2>&1
 echo "done"
 
+echo -n "[x] updating wpscan.. "
+cd /pentest/wpscan
+git pull > /dev/null 2>&1
+echo "done"
+
 echo -n "[x] updating exploitdb archive.. "
 cd /pentest/exploitdb
 lver=$(cat version) > /dev/null 2>&1
