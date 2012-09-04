@@ -1,7 +1,7 @@
 (RA)spberry (PI) (D)ropbox
 ==========================
-version 0.2
-villain@evilthings.org
+- version 0.2
+- villain@evilthings.org
 
 about
 =======
