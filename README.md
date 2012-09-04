@@ -1,7 +1,8 @@
 (RA)spberry (PI) (D)ropbox
 ==========================
 version 0.2
-email: villain@evilthings.org
+
+villain@evilthings.org
 
 about
 =======
