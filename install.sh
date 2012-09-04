@@ -134,6 +134,16 @@ echo "done"
 
 echo -n "[x] setting permissions on /pentest.. "
 chown -R root.root /pentest
+chmod 755 /pentest/fasttrack/fast-track.py > /dev/null 2>&1
+chmod 755 /pentest/fastttrack/setup.py > /dev/null 2>&1
+chmod 755 /pentest/joomscan/joomscan.pl > /dev/null 2>&1
+chmod 755 /pentest/sickfuzz/sickfuzz.py > /dev/null 2>&1
+chmod 755 /pentest/smtp-user-enum/smtp-user-enum.pl > /dev/null 2>&1
+chmod 755 /pentest/snmpenum/snmpenum.pl > /dev/null 2>&1
+chmod 755 /pentest/sqlbrute/sqlbrute.py > /dev/null 2>&1
+chmod 755 /pentest/theharvester/*.py > /dev/null 2>&1
+chmod 755 /pentest/waffit/wafw00f.py > /dev/null 2>&1
+chmod 755 /pentest/wfuzz/*.py > /dev/null 2>&1
 echo "done"
 
 echo -n "[x] changing default RAM allocation.. "
