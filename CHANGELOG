@@ -5,6 +5,7 @@ v0.2
 - added thc-amap
 - added joomscan
 - added wpscan
+- added searchsploit.sh (for searching exploitdb archive)
 
 v0.1
 - initial release

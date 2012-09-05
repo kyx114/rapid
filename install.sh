@@ -59,6 +59,11 @@ cp src/bin/rapid-update.sh /usr/local/bin > /dev/null 2>&1
 chmod 755 /usr/local/bin/rapid-update.sh > /dev/null 2>&1
 echo "done"
 
+echo -n "[x] installing exploitdb search script to /usr/local/bin.. "
+cp src/bin/searchsploit.sh /usr/local/bin > /dev/null 2>&1
+chmod 755 /usr/local/bin/searchsploit.sh > /dev/null 2>&1
+echo "done"
+
 echo -n "[x] installing random tools to /pentest.. "
 cd src/pentest/amap > /dev/null 2>&1
 ./configure > /dev/null 2>&1
