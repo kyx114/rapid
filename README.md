@@ -1,6 +1,6 @@
 (RA)spberry (PI) (D)ropbox
 ==========================
-rapid v0.2-dev
+**rapid v0.2-dev**
 
 villain@evilthings.org
 
