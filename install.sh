@@ -82,7 +82,6 @@ cd /pentest/exploitdb
 wget http://www.exploit-db.com/archive.tar.bz2  > /dev/null 2>&1
 tar jxf archive.tar.bz2 > /dev/null 2>&1
 rm -rf archive.tar.bz2 > /dev/null 2>&1
-touch version
 echo "done"
 
 echo -n "[x] installing metasploit framework (can take a while).. "

@@ -52,17 +52,9 @@ echo "done"
 
 echo -n "[x] updating exploitdb archive.. "
 cd /pentest/exploitdb
-lver=$(cat version) > /dev/null 2>&1
-rver=$(curl --silent --head http://www.exploit-db.com/archive.tar.bz2 | grep "Last-Modified" | md5sum | cut -f1 -d' ') > /dev/null 2>&1
-
-if [ "$lver" == "$rver" ]; then
-	exit
-else
-	wget http://www.exploit-db.com/archive.tar.bz2  > /dev/null 2>&1
-	tar jxf archive.tar.bz2 > /dev/null 2>&1
-	rm -rf archive.tar.bz2 > /dev/null 2>&1
-	echo "$rver" > version > /dev/null 2>&1
-fi
+wget http://www.exploit-db.com/archive.tar.bz2  > /dev/null 2>&1
+tar jxf archive.tar.bz2 > /dev/null 2>&1
+rm -rf archive.tar.bz2 > /dev/null 2>&1
 echo "done"
 
 echo -n "[x] updating nikto.. "
