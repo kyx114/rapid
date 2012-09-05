@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo " "
-echo "[x] installing rapid v0.2"
+echo "[x] installing rapid v0.2-dev"
 echo "    villain@evilthings.org"
 echo " "
 
